@@ -31,9 +31,9 @@ public class StatmentTest {
 		customer2.addRental(rental2);
 		customer3.addRental(rental3);
 		
-		String stat1 = customer.statment();
-		String stat2 = customer2.statment();
-		String stat3 = customer3.statment();
+		String stat1 = customer.statement();
+		String stat2 = customer2.statement();
+		String stat3 = customer3.statement();
 		
 		//Tests
 		assertEquals(stat1, "Rental Record for Fran\n\tTerminator\t6.5\n"
@@ -69,9 +69,9 @@ public class StatmentTest {
 		customer2.addRental(rental2);
 		customer3.addRental(rental3);
 		
-		String stat1 = customer.htmlStatment();
-		String stat2 = customer2.htmlStatment();
-		String stat3 = customer3.htmlStatment();
+		String stat1 = customer.htmlStatement();
+		String stat2 = customer2.htmlStatement();
+		String stat3 = customer3.htmlStatement();
 		
 		//Tests
 		assertEquals(stat1, "<H1>Rentals for <EM>Fran</EM></H1><P>\nTerminator: 6.5<BR>\n"
