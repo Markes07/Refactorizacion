@@ -8,7 +8,7 @@
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
-    <persistedState key="aggregateWorkingSetId"/>
+    <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1495374157075"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <tags>topLevel</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_XnCH4in8Eee3NNtVg8rwZQ" selectedElement="_XnCu8Cn8Eee3NNtVg8rwZQ" horizontal="true">
@@ -69,6 +69,7 @@
           <tags>persp.newWizSC:org.eclipse.m2e.core.wizards.Maven2ProjectWizard</tags>
           <tags>persp.showIn:org.eclipse.tm.terminal.view.ui.TerminalsView</tags>
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
+          <tags>persp.actionSet:ecobertura.ui.actionSet</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_YTovMSn8Eee3NNtVg8rwZQ" selectedElement="_YTovMin8Eee3NNtVg8rwZQ" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_YTovMin8Eee3NNtVg8rwZQ" elementId="topLeft" containerData="2500" selectedElement="_YTovMyn8Eee3NNtVg8rwZQ">
               <tags>active</tags>
@@ -132,7 +133,7 @@
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_YRk5sCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.gif" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1495374157075&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <tags>active</tags>
@@ -226,7 +227,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YEQ2cin8Eee3NNtVg8rwZQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_YEaAZin8Eee3NNtVg8rwZQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_XPHXJCn8Eee3NNtVg8rwZQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_U6vm4D4rEeeBZILAsHRI3g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_XPHXJCn8Eee3NNtVg8rwZQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YEQ2cyn8Eee3NNtVg8rwZQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -253,7 +254,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YEQ2dyn8Eee3NNtVg8rwZQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_YEaAcCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_XPFiCSn8Eee3NNtVg8rwZQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_U65-8D4rEeeBZILAsHRI3g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_XPFiCSn8Eee3NNtVg8rwZQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YEQ2eCn8Eee3NNtVg8rwZQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -833,6 +834,7 @@
   <bindingTables xmi:id="_YRbJBSn8Eee3NNtVg8rwZQ" bindingContext="_YRbJBCn8Eee3NNtVg8rwZQ"/>
   <bindingTables xmi:id="_YRbJByn8Eee3NNtVg8rwZQ" bindingContext="_YRbJBin8Eee3NNtVg8rwZQ"/>
   <bindingTables xmi:id="_YRbJCSn8Eee3NNtVg8rwZQ" bindingContext="_YRbJCCn8Eee3NNtVg8rwZQ"/>
+  <bindingTables xmi:id="_U2YEQT4rEeeBZILAsHRI3g" bindingContext="_U2YEQD4rEeeBZILAsHRI3g"/>
   <rootContext xmi:id="_XOQbgin8Eee3NNtVg8rwZQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.platform" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_XOQbgyn8Eee3NNtVg8rwZQ" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.platform" name="In Windows" description="A window is open">
       <children xmi:id="_XOQbhCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.platform" name="%bindingcontext.name.bindingView"/>
@@ -951,6 +953,7 @@
   <rootContext xmi:id="_YRbJBCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.wst.server.ui.new.actionSet" name="Auto::org.eclipse.wst.server.ui.new.actionSet"/>
   <rootContext xmi:id="_YRbJBin8Eee3NNtVg8rwZQ" elementId="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" name="Auto::org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
   <rootContext xmi:id="_YRbJCCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.wst.ws.explorer.explorer" name="Auto::org.eclipse.wst.ws.explorer.explorer"/>
+  <rootContext xmi:id="_U2YEQD4rEeeBZILAsHRI3g" elementId="ecobertura.ui.actionSet" name="Auto::ecobertura.ui.actionSet"/>
   <descriptors xmi:id="_XTLXwCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
     <tags>Editor</tags>
   </descriptors>
@@ -1337,6 +1340,10 @@
   <descriptors xmi:id="_XUpXZCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.wst.xml.views.XPathView" label="XPath" iconURI="platform:/plugin/org.eclipse.wst.xml.xpath.ui/icons/full/xpath.gif" tooltip="" category="XML" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <tags>View</tags>
     <tags>categoryTag:XML</tags>
+  </descriptors>
+  <descriptors xmi:id="_URufED4rEeeBZILAsHRI3g" elementId="ecobertura.ui.views.session.CoverageSessionView" label="Coverage Session View" iconURI="platform:/plugin/ecobertura.ui/icons/magnifier.gif" tooltip="" category="eCobertura" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:eCobertura</tags>
   </descriptors>
   <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
     <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
@@ -2562,6 +2569,15 @@
   <commands xmi:id="_XmmqFCn8Eee3NNtVg8rwZQ" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.doc.legend.show.action" commandName="Show UI Legend" description="Show Tasks UI Legend" category="_XO24fyn8Eee3NNtVg8rwZQ"/>
   <commands xmi:id="_XmnRICn8Eee3NNtVg8rwZQ" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.context.ui.actions.tasklist.focus" commandName="Focus on Workweek" description="Focus on Workweek" category="_XO24fyn8Eee3NNtVg8rwZQ"/>
   <commands xmi:id="_XmnRISn8Eee3NNtVg8rwZQ" elementId="AUTOGEN:::org.eclipse.pde.ui.logViewActions/org.eclipse.jdt.debug.ui.LogViewActions.showStackTrace" commandName="Show Stack Trace in Console View" description="Show Stack Trace in Console View" category="_XO24fyn8Eee3NNtVg8rwZQ"/>
+  <commands xmi:id="_T6ayUD4rEeeBZILAsHRI3g" elementId="ecobertura.ui.launching.javaApplicationLaunchCommand" commandName="Cover Java Application" category="_XO24din8Eee3NNtVg8rwZQ"/>
+  <commands xmi:id="_T6ayUT4rEeeBZILAsHRI3g" elementId="ecobertura.ui.views.session.commands.selectRecentCoverageSession" commandName="Select a recent coverage session" description="Selects one of the recently opened coverage sessions" category="_T6ZkMT4rEeeBZILAsHRI3g">
+    <parameters xmi:id="_T6bZYD4rEeeBZILAsHRI3g" elementId="ecobertura.ui.views.session.commands.selectRecentCoverageSession.session" name="session"/>
+    <parameters xmi:id="_T6bZYT4rEeeBZILAsHRI3g" elementId="org.eclipse.ui.commands.radioStateParameter" name="State" optional="false"/>
+  </commands>
+  <commands xmi:id="_T6bZYj4rEeeBZILAsHRI3g" elementId="ecobertura.ui.views.session.commands.openCoverageSession" commandName="Open Coverage Session" description="Open a coverage session within the view" category="_T6ZkMT4rEeeBZILAsHRI3g"/>
+  <commands xmi:id="_T6bZYz4rEeeBZILAsHRI3g" elementId="ecobertura.ui.views.session.commands.openCoveredClass" commandName="Open Covered Class" description="Open a covered class from a coverage session" category="_T6ZkMT4rEeeBZILAsHRI3g"/>
+  <commands xmi:id="_U1aa8D4rEeeBZILAsHRI3g" elementId="AUTOGEN:::ecobertura.ui.actionSet/ecobertura.ui.actions.LaunchAction" commandName="Coverage Action" description="Cover (Cobertura)" category="_XO24fyn8Eee3NNtVg8rwZQ"/>
+  <commands xmi:id="_U1bCAD4rEeeBZILAsHRI3g" elementId="AUTOGEN:::ecobertura.ui.actionSet/ecobertura.ui.actions.CoverAsAction" commandName="Cover As" category="_XO24fyn8Eee3NNtVg8rwZQ"/>
   <addons xmi:id="_XOQbhin8Eee3NNtVg8rwZQ" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_XOQbhyn8Eee3NNtVg8rwZQ" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_XOQbiCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2623,4 +2639,5 @@
   <categories xmi:id="_XO24mCn8Eee3NNtVg8rwZQ" elementId="org.eclipse.gef.category.view" name="View" description="View"/>
   <categories xmi:id="_XO24mSn8Eee3NNtVg8rwZQ" elementId="org.eclipse.jdt.ui.category.source" name="Source" description="Java Source Actions"/>
   <categories xmi:id="_XO24min8Eee3NNtVg8rwZQ" elementId="org.eclipse.pde.runtime.spy.commands.category" name="Spy"/>
+  <categories xmi:id="_T6ZkMT4rEeeBZILAsHRI3g" elementId="ecobertura.ui.views.session.commands.category" name="Coverage Session View" description="Coverage Session View Commands"/>
 </application:Application>
