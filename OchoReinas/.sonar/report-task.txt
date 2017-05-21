@@ -1,0 +1,5 @@
+projectKey=GIT
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/GIT
+ceTaskId=AVwrLp5tRAhlcYA1KU-P
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVwrLp5tRAhlcYA1KU-P
