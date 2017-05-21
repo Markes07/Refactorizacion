@@ -69,8 +69,10 @@ public class User {
 		FalsaPosicion fP = new FalsaPosicion();
 		double raiz = fP.calcularRaiz(p, xIzq, xDer, 100, 1e-6);
 		out.println("Calculando la raíz en el intervalo: [" + xIzq + "," + xDer + "]");
-		out.println("Raíz: " + raiz);		
-		String cadena = String.format("Iteraciones%n", fP.getIteraciones());
-		out.printf("Iteraciones%n" + fP.getIteraciones());
+		out.println("Raíz: " + raiz);
+		StringBuilder s = new StringBuilder();
+		s.append(fP.getIteraciones());
+		String cadena = String.format("%s", s.toString());
+		out.println(cadena);	
 	}
 }
