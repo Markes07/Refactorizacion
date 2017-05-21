@@ -1,6 +1,6 @@
 package actividad04.RaizPolinomio;
 
-public abstract class Funcion {
+interface Funcion {
 	
 	public abstract double eval(double x);
 }

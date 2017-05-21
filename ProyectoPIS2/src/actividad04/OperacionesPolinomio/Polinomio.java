@@ -6,16 +6,25 @@ import java.util.Comparator;
 
 public class Polinomio {
 	
-	private ArrayList<Monomio> polinomio;
+	private final class Comparador implements Comparator<Monomio> {
+		@Override
+		public int compare(Monomio m1, Monomio m2) {
+			return Integer.compare(m2.getExponente(), m1.getExponente());
+		}
+	}
+	
+	private ArrayList<Monomio> pol;
 	
 	public Polinomio() {
-		polinomio = new ArrayList<Monomio>();
+		pol = new ArrayList<>();
 	}
+	
 	public Polinomio(ArrayList<Monomio> p) {
-		polinomio = p;
+		pol = p;
 	}
+	
 	public ArrayList<Monomio> getPolinomio() {
-		return polinomio;
+		return pol;
 	}
 		
 	public boolean add(Monomio monomio){
@@ -30,21 +39,21 @@ public class Polinomio {
 			}
 		}
 		return encontrado;*/
-		polinomio.add(monomio);
+		pol.add(monomio);
 		this.ordenar();
 		return true;
 	}
 	
 	public boolean remove(Monomio monomio) {
-		polinomio.remove(monomio);
+		pol.remove(monomio);
 		this.ordenar();
 		return true;
 	}
 	
 	public boolean isOrdenado() {
 		boolean ordenado = false;
-		for(int i = 0; i < polinomio.size() - 1; i++) {
-			if(polinomio.get(i).getExponente() > polinomio.get(i + 1).getExponente()) {
+		for(int i = 0; i < pol.size() - 1; i++) {
+			if(pol.get(i).getExponente() > pol.get(i + 1).getExponente()) {
 				ordenado = true;
 			}
 			else {
@@ -55,19 +64,14 @@ public class Polinomio {
 	}
 	
 	public void ordenar() {
-		Collections.sort(polinomio, new Comparator<Monomio>() {
-			@Override
-			public int compare(Monomio m1, Monomio m2) {
-				return new Integer(m2.getExponente()).compareTo(new Integer(m1.getExponente()));
-			}	
-		});
-	}
+		Collections.sort(pol, new Comparador());
+	}	
 	
 	public void simplificar() {
-		ArrayList<Integer> exponentes = new ArrayList<Integer>();
-		ArrayList<Monomio> monomiosMismoExponente = new ArrayList<Monomio>();
-		ArrayList<Monomio> simplificado = new ArrayList<Monomio>();
-		for(Monomio m: polinomio) {
+		ArrayList<Integer> exponentes = new ArrayList<>();
+		ArrayList<Monomio> monomiosMismoExponente = new ArrayList<>();
+		ArrayList<Monomio> simplificado = new ArrayList<>();
+		for(Monomio m: pol) {
 			exponentes.add(m.getExponente());
 		}
 		int max = 0;
@@ -80,7 +84,7 @@ public class Polinomio {
 		boolean encontrado = false;
 		while(i <= max) {
 			int suma = 0;
-			for(Monomio m: polinomio) {
+			for(Monomio m: pol) {
 				if(m.getExponente() == i) {
 					monomiosMismoExponente.add(m);
 					encontrado = true;
@@ -90,22 +94,22 @@ public class Polinomio {
 				suma = suma + m2.getCoeficiente();
 			}
 			monomiosMismoExponente.clear();
-			if(encontrado == true) {
+			if(encontrado) {
 				Monomio mSimplificado = new Monomio(suma, i);
 				simplificado.add(mSimplificado);
 				encontrado = false;
 			}
 			i++;
 		}
-		polinomio = simplificado;
+		pol = simplificado;
 		ordenar();
 	}
 	
 	public Polinomio sumar(Polinomio p) {
-		ArrayList<Monomio> lista = new ArrayList<Monomio>();
-		ArrayList<Integer> exponentes = new ArrayList<Integer>();
-		for(Monomio m: polinomio) {
-			for(Monomio m2: p.polinomio) {
+		ArrayList<Monomio> lista = new ArrayList<>();
+		ArrayList<Integer> exponentes = new ArrayList<>();
+		for(Monomio m: pol) {
+			for(Monomio m2: p.pol) {
 				if(m.getExponente() == m2.getExponente()) {
 					int c = m.getCoeficiente() + m2.getCoeficiente();
 					Monomio m3 = new Monomio(c, m.getExponente());
@@ -114,12 +118,12 @@ public class Polinomio {
 				}
 			}
 		}
-		for(Monomio m: polinomio) {
+		for(Monomio m: pol) {
 			if(!exponentes.contains(m.getExponente())) {
 				lista.add(m);
 			}
 		}
-		for(Monomio m: p.polinomio) {
+		for(Monomio m: p.pol) {
 			if(!exponentes.contains(m.getExponente())) {
 				lista.add(m);
 			}
@@ -130,9 +134,9 @@ public class Polinomio {
 	}
 	
 	public Polinomio multiplicar(Polinomio p) {
-		ArrayList<Monomio> lista = new ArrayList<Monomio>();
-		for(Monomio m: polinomio) {
-			for(Monomio m2: p.polinomio) {
+		ArrayList<Monomio> lista = new ArrayList<>();
+		for(Monomio m: pol) {
+			for(Monomio m2: p.pol) {
 				int c = m.getCoeficiente()*m2.getCoeficiente();
 				int e = m.getExponente() + m2.getExponente();
 				Monomio m3 = new Monomio(c, e);
@@ -145,28 +149,28 @@ public class Polinomio {
 	}
 	
 	public ArrayList<Polinomio> dividir(Polinomio p) {
-		ArrayList<Polinomio> resultado = new ArrayList<Polinomio>();
-		ArrayList<Monomio> dividendo = new ArrayList<Monomio>();
-		ArrayList<Monomio> cociente = new ArrayList<Monomio>();
-		ArrayList<Integer> exponentes = new ArrayList<Integer>();
+		ArrayList<Polinomio> resultado = new ArrayList<>();
+		ArrayList<Monomio> dividendo = new ArrayList<>();
+		ArrayList<Monomio> cociente = new ArrayList<>();
+		ArrayList<Integer> exponentes = new ArrayList<>();
 		if(p.size() > 2 || p.get(0).getCoeficiente() != 1 
 				|| p.get(0).getExponente() != 1 || p.get(1).getExponente() != 0) {
 			throw new RuntimeException();
 		}
-		int grado = polinomio.get(0).getExponente();
+		int grado = pol.get(0).getExponente();
 		for(int i = grado; i >= 0; i--) {
 			exponentes.add(i);
 		}
 		boolean encontrado = false;
 		for(Integer i: exponentes) {
-			for(Monomio mon: polinomio) {
+			for(Monomio mon: pol) {
 				if(i == mon.getExponente()) {
 					Monomio nuevo = new Monomio(mon.getCoeficiente(), mon.getExponente());
 					dividendo.add(nuevo);
 					encontrado = true;
 				}				
 			}
-			if(encontrado == false) {
+			if(!encontrado) {
 				Monomio nuevo2 = new Monomio(0, i);
 				dividendo.add(nuevo2);
 			}
@@ -175,7 +179,7 @@ public class Polinomio {
 		
 		Polinomio r = new Polinomio();
 		int divisor = -p.get(1).getCoeficiente();
-		Monomio m = new Monomio(polinomio.get(0).getCoeficiente(), polinomio.get(0).getExponente() - 1);
+		Monomio m = new Monomio(pol.get(0).getCoeficiente(), pol.get(0).getExponente() - 1);
 		cociente.add(m);
 		int n = dividendo.get(0).getCoeficiente();
 		int x = n*divisor;;
@@ -199,60 +203,57 @@ public class Polinomio {
 	}
 	
 	public int size() {
-		return polinomio.size();
+		return pol.size();
 	}
 	
 	public Monomio get(int index) {
-		return polinomio.get(index);
+		return pol.get(index);
 	}
 	public void remove(int index) {
-		polinomio.remove(index);
+		pol.remove(index);
 	}
 	
 	public String toString() {
-		String cadena = "";
-		for(int i = 0; i < polinomio.size(); i++) {		
-			if(i == polinomio.size() - 1 && polinomio.get(i).getExponente() == 0) {
-				cadena = cadena + "(" + polinomio.get(i).getCoeficiente() + ")";
+		StringBuilder cadena = new StringBuilder();
+		for(int i = 0; i < pol.size(); i++) {		
+			if(i == pol.size() - 1 && pol.get(i).getExponente() == 0) {
+				cadena.append("(" + pol.get(i).getCoeficiente() + ")");
 			}
-			else if(i == polinomio.size() - 1 && polinomio.get(i).getCoeficiente() > 0) {
-				cadena = cadena + "(" + polinomio.get(i).getCoeficiente() + ")x^" + polinomio.get(i).getExponente();
+			else if(i == pol.size() - 1 && pol.get(i).getCoeficiente() > 0) {
+				cadena.append("(" + pol.get(i).getCoeficiente() + ")x^" + pol.get(i).getExponente());
 			}
 			else {
-				cadena = cadena + "(" + polinomio.get(i).getCoeficiente()
-						+ ")x^" + polinomio.get(i).getExponente() + " + ";
+				cadena.append("(" + pol.get(i).getCoeficiente()
+						+ ")x^" + pol.get(i).getExponente() + " + ");
 			}		
 		}
-		return cadena;
+		return cadena.toString();
 	}
 	public Polinomio convertirRuffini() {
-		ArrayList<Monomio> dividendo = new ArrayList<Monomio>();
-		ArrayList<Integer> exponentes = new ArrayList<Integer>();
+		ArrayList<Monomio> dividendo = new ArrayList<>();
+		ArrayList<Integer> exponentes = new ArrayList<>();
 
-		int grado = polinomio.get(0).getExponente();
+		int grado = pol.get(0).getExponente();
 		for(int i = grado; i >= 0; i--) {
 			exponentes.add(i);
 		}
 		boolean encontrado = false;
 		for(Integer i: exponentes) {
-			for(Monomio mon: polinomio) {
+			for(Monomio mon: pol) {
 				if(i == mon.getExponente()) {
 					Monomio nuevo = new Monomio(mon.getCoeficiente(), mon.getExponente());
 					dividendo.add(nuevo);
 					encontrado = true;
 				}				
 			}
-			if(encontrado == false) {
+			if(!encontrado) {
 				Monomio nuevo2 = new Monomio(0, i);
 				dividendo.add(nuevo2);
 			}
 			encontrado = false;
 		}
-		Polinomio pol = new Polinomio(dividendo);
-		return pol;
+		return new Polinomio(dividendo);
 	}
-	
-	
 	
 	/*
 	 public boolean comprobarEstable() {
@@ -382,16 +383,5 @@ public class Polinomio {
 			}	
 		}
 		return matriz;	
-	}*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}*/		
 }

@@ -1,11 +1,11 @@
 package actividad04.RaizPolinomio;
 
-public class Monomio  {
+public class Mon  {
 
 	private int coeficiente;
 	private int exponente;
 	
-	public Monomio(int coeficiente, int exponente) {
+	public Mon(int coeficiente, int exponente) {
 		this.coeficiente = coeficiente;
 		this.exponente = exponente;
 	}
