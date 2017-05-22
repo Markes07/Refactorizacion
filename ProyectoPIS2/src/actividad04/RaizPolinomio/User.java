@@ -21,7 +21,7 @@ public class User {
 		
 		//Polinomio 1
 		Pol p = new Pol();
-		Mon m = null;
+		Mon m;
 		out.println("Introduzca el coeficiente: ");
 		int c = scan.nextInt();
 		out.println("Introduzca el exponente: ");

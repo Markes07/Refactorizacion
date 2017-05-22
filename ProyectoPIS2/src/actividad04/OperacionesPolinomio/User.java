@@ -26,7 +26,7 @@ public class User {
 		
 		//Polinomio 1
 		Polinomio p = new Polinomio();
-		Monomio m = null;
+		Monomio m;
 		out.println(coe);
 		int c = scan.nextInt();
 		out.println(exp);
@@ -51,7 +51,7 @@ public class User {
 		out.println("Repite el proceso para crear otro polinomio");	
 		//Polinomio 2
 		Polinomio p2 = new Polinomio();
-		Monomio m2 = null;
+		Monomio m2;
 		out.println(coe);
 		int c2 = scan.nextInt();
 		out.println(exp);
@@ -99,7 +99,7 @@ public class User {
 			out.println("Necesita un polinomio divisor de la forma x + t");
 			out.println("Introduzca un polinomio raíz (x + t)");
 			Polinomio p3 = new Polinomio();
-			Monomio m3 = null;
+			Monomio m3;
 			out.println("Introduzca el coeficiente (debe ser igual a 1): ");
 			int c3 = scan.nextInt();
 			if(c3 != 1) {

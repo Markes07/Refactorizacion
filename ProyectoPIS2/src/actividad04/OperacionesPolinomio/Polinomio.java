@@ -40,7 +40,6 @@ public class Polinomio {
 		}
 		return encontrado;*/
 		pol.add(monomio);
-		this.ordenar();
 		return true;
 	}
 	
